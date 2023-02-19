@@ -3,7 +3,7 @@ from pytube import YouTube
 from pydub import AudioSegment
 import os
 
-API_KEY = "AIzaSyDr93DgwAnldJlyJHn_faNGVTbcAoRVCWc"
+API_KEY = "Your API Key Goes Here"
 
 def urlCreator():
     print("Welcome to SnippIt: Song Snippet Maker")
