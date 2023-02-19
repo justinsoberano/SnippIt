@@ -3,8 +3,7 @@ from pytube import YouTube
 from pydub import AudioSegment
 import os
 
-
-API_KEY = "Use Own API key"    
+API_KEY = "Insert API Key Here"    
     
 def urlCreator():
     print("Welcome to SnippIt: Song Snippet Maker")
@@ -47,6 +46,7 @@ def mp4Downloader():
     try:
         song.download(downloadFolder())
         print(song.title + " successfully loaded.")
+        
         sound = AudioSegment.from_file(os.path.join(base_dir, song.title + ".mp4"))
         
         beginTime = input("Where would you like the song snippet to begin? (mm:ss) || ")
@@ -65,7 +65,7 @@ def mp4Downloader():
         print("A snippet of " + song.title + " has been downloaded to your downloads folder")
         
     except:
-        print("Try Again: Error downloading file")
+        print("Error has occurred. Please try again.")
        
 def downloadFolder():
     # Checks the OS and sets the download folder accordingly
